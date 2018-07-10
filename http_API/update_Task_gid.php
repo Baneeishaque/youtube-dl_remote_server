@@ -3,10 +3,10 @@
 include_once 'config.php';
 
 $id = filter_input(INPUT_POST, 'id');
-$gid = filter_input(INPUT_POST, 'gid');
+//$gid = filter_input(INPUT_POST, 'gid');
 
 //Status 1 : Added to downloads
-$update_task_sql = "UPDATE `tasks` SET `gid`='$gid',`status`=1,`modification_date_time`=CONVERT_TZ(NOW(),'-05:30','+00:00') WHERE `id`=$id";
+$update_task_sql = "UPDATE `tasks` SET `status`=1,`modification_date_time`=CONVERT_TZ(NOW(),'-05:30','+00:00') WHERE `id`=$id";
 
 //echo $update_task_sql;
 
